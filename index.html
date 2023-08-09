@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/directorio64.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>TO DO LIST APP</title>
+
+</head>
+
+<body>
+    <div id="contenedor" class="w-full min-h-screen p-10">
+        <div id="todoapp" class="w-full my-100 mx-auto mb-20 py-5 px-4 pb-8">
+            <header class="flex justify-between items-center mb-10">
+                <h1 class="text-4xl flex justify-center items-center"> To-do list app <img class="ml-2" src="icons/directorio64.png" alt="Libreta"> </h1> 
+                <button id="clear-button" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4">Clear all <i class="fas fa-trash-alt"></i></button>
+            </header>           
+            <div id="row" class=" flex items-center justify-between pl-3 mb-3"> 
+                <input type="text" id="input-box" placeholder="Add a new task ... " class="h-10 px-3 rounded-lg border-2 border-gray-300 focus:border-blue-500">
+                <button id="add-button" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 ml-4">Add <i class="fas fa-save"></i></button>
+            </div>
+
+            <hr class="border-t-4 border-black">
+
+            <ul id="list-container">
+
+                <!--
+                <li class="checked"> Task 1 </li>
+                <li> Task 2 </li>
+                <li> Task 3 </li>
+                -->
+                
+            </ul>
+        </div>
+
+    </div>
+
+    <script type="module" src="main.js"></script>
+
+</body>
+
+</html>
