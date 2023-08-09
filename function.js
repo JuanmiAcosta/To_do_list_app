@@ -3,8 +3,9 @@
 import { INPUTBOX, LISTCONTAINER } from "./ctes.js"
 
 export function saveData() {
-
-    localStorage.setItem("data", LISTCONTAINER.innerHTML);
+    
+    localStorage.setItem("data", LISTCONTAINER.innerHTML); // Guardamos los datos en el localStorage
+    console.log("Data saved!!");
 
 }
 
@@ -13,7 +14,7 @@ export function loadData() {
     if (localStorage.getItem("data")) {
         LISTCONTAINER.innerHTML = localStorage.getItem("data");
     }
-    
+    console.log("Data loaded!!");
 }
 
 export function addTask() {
@@ -31,19 +32,19 @@ export function addTask() {
     }
 
     INPUTBOX.value = ""; // Limpiamos el input
-    saveData();
+    saveData(); // Guardamos los datos en el localStorage
 }
 
 export function cross_delete_Task(e) {
 
-    if (e.target.tagName === "LI") {
+    if (e.target.tagName === "LI") { // Si el elemento clicado es un LI
 
-        e.target.classList.toggle("checked");
+        e.target.classList.toggle("checked"); // Añadimos o quitamos la clase checked
         saveData();
 
-    } else if (e.target.tagName === "SPAN") {
+    } else if (e.target.tagName === "SPAN") { // Si el elemento clicado es un SPAN
 
-        e.target.parentElement.remove();
+        e.target.parentElement.remove(); // Eliminamos el elemento padre del SPAN (el LI)
         saveData();
 
     }
