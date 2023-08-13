@@ -6,20 +6,22 @@
 }
 
 #contenedor {
-    background-image: linear-gradient(45deg,
-            hsl(290deg 73% 19%) 0%,
-            hsl(270deg 48% 28%) 11%,
-            hsl(248deg 38% 37%) 22%,
-            hsl(228deg 44% 40%) 33%,
-            hsl(215deg 58% 41%) 44%,
-            hsl(206deg 78% 40%) 56%,
-            hsl(199deg 100% 38%) 67%,
-            hsl(196deg 100% 40%) 78%,
-            hsl(193deg 100% 42%) 89%,
-            hsl(190deg 96% 44%) 100%);
+
+    background-image: linear-gradient(20deg,
+            hsl(86deg 90% 85%) 0%,
+            hsl(106deg 85% 86%) 18%,
+            hsl(131deg 80% 85%) 33%,
+            hsl(148deg 78% 81%) 45%,
+            hsl(161deg 75% 77%) 56%,
+            hsl(170deg 72% 74%) 65%,
+            hsl(178deg 68% 72%) 74%,
+            hsl(184deg 71% 72%) 82%,
+            hsl(189deg 76% 72%) 90%,
+            hsl(194deg 78% 74%) 100%);
+
 }
 
-h1{
+h1 {
     font-weight: bolder;
 }
 
@@ -27,7 +29,7 @@ h1{
     background-color: white;
     border-radius: 10px;
     max-width: 700px;
-    border : 5px solid black;
+    border: 5px solid black;
 }
 
 #todoapp h1 img {
@@ -55,46 +57,46 @@ button {
     border-radius: 40px;
 }
 
-ul li{
+ul li {
     margin-top: 10px;
     margin-bottom: 10px;
     list-style: none;
-    font-size:17px;
+    font-size: 17px;
     padding: 12px 8px 12px 50px;
-    user-select : none;
+    user-select: none;
     cursor: pointer;
-    position:relative;
+    position: relative;
 }
 
-ul li::before{
+ul li::before {
     content: '';
     position: absolute;
     height: 28px;
-    width:28px;
+    width: 28px;
     border-radius: 50%;
     background-image: url(icons/unchecked.png);
-    background-size:cover;
-    background-position:center;
-    top:12px;
-    left:8px;
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
 }
 
-ul li.checked{
-    color:#555;
-    text-decoration:line-through;
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
 }
 
-ul li.checked::before{
+ul li.checked::before {
     background-image: url(icons/checked.png);
-} 
+}
 
-ul li span{
-    position : absolute;
+ul li span {
+    position: absolute;
     right: 0;
-    top:5px;
+    top: 5px;
     width: 40px;
     height: 40px;
-    font-size:22px;
+    font-size: 22px;
     color: #555;
     line-height: 40px;
     text-align: center;
@@ -105,3 +107,20 @@ ul li span:hover {
     background: #edeef0;
 }
 
+@media (max-width: 530px) {
+    #header {
+        flex-direction: column;
+        /* Cambia la dirección a columna */
+        align-items: center;
+        /* Centra los componentes horizontalmente */
+    }
+}
+
+@media (max-width: 400px) {
+    #row {
+        flex-direction: column;
+        /* Cambia la dirección a columna */
+        align-items: center;
+        /* Centra los componentes horizontalmente */
+    }
+}
